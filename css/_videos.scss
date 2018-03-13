@@ -1,0 +1,62 @@
+.videos{
+  #bouton-retour {
+    position: fixed;
+    cursor: pointer;
+    z-index: 999;
+    top: 20px;
+    right: 20px;
+    img{
+      width: 50px;
+    }
+  }
+
+  section#video{
+    height: calc(100vh - 250px);
+    background-color: #FFF;
+    overflow: hidden;
+
+    .videoWrapper{
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      //height: 61.8%;
+      margin-top: 10vh;
+      overflow: hidden;
+      background-color: azure;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        //border: 3px solid red;
+      }
+  }
+
+  }
+  section#liens{
+    height: 250px;
+    background-color: aliceblue;
+    padding: 40px;
+
+    .linkWrapper{
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      //overflow: hidden;
+
+      .linkOverflow{
+        width: auto;
+        height: calc(100% + 20px);
+        white-space: nowrap;
+        overflow-x: scroll;
+
+        a{
+          display: inline-block;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

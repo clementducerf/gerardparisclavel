@@ -1,0 +1,38 @@
+/* Design Variables */
+
+/* Colors */
+$red: #ff0000;
+$blue: #0000ff;
+
+/* Font families */
+$font-sans: "Verdana", 'Roboto', Helvetica, Verdana, Arial, sans-serif;
+$font-serif: "Georgia", Georgia, Palatino, serif;
+
+/* Responsiveness */
+$for-phone-only : '(max-width: 599px)';
+$for-tablet-portrait-up : '(min-width: 600px)';
+$for-tablet-landscape-up : '(min-width: 900px)';
+$for-desktop-up : '(min-width: 1200px)';
+$for-big-desktop-up : '(min-width: 1800px)';
+
+/* -------------- */
+
+.wrapper{
+  //background-color: aliceblue;
+
+  @include mq($for-phone-only){
+    max-width: 400px;
+  }
+
+  @include mq($for-tablet-portrait-up){
+    max-width: 500px;
+  }
+
+  @include mq($for-tablet-landscape-up){
+    max-width: 700px;
+  }
+
+  @include mq($for-desktop-up){
+    max-width: 1200px;
+  }
+}
