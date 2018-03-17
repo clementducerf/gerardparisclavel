@@ -44,28 +44,18 @@ Template Name: Home
             <?php
             // Set up the objects needed
             $my_wp_query = new WP_Query();
-            $all_wp_pages = $my_wp_query->query(array('post_type' => 'page', 'posts_per_page' => '-1'));
-
             global $post;
             $currentid = $post->ID;
+            $video_pages = $my_wp_query->query(array('post_parent' => $currentid,'post_type' => 'page', 'posts_per_page' => '-1','order' => 'ASC'));
 
-            $portfolio_children = get_page_children( $currentid, $all_wp_pages );
+            $portfolio_childrens = get_page_children( $currentid, $video_pages );
 
-            // echo what we get back from WP to the browser
-            echo '<pre>' . print_r( $portfolio_children, true ) . '</pre>';
-            //echo json_encode($page);
+            foreach ($portfolio_childrens as $video_pages){
+                $currentThumbnailUrl = get_the_post_thumbnail_url($video_pages->{'ID'});
+                $currentPageUrl = get_page_link($video_pages->{'ID'});
+                echo '<a href="'.$currentPageUrl.'"><img src="'.$currentThumbnailUrl.'"></a>';
+            }
             ?>
-
-
-            <a href="page-video01.html"><img src="img/hp/001.jpg"></a>
-            <a href="page-video04.html"><img src="img/hp/004.jpg"></a>
-            <a href="page-video07.html"><img src="img/hp/007.jpg"></a>
-            <a href="page-video02.html"><img src="img/hp/002.jpg"></a>
-            <a href="page-video05.html"><img src="img/hp/005.jpg"></a>
-            <a href="page-video08.html"><img src="img/hp/008.jpg"></a>
-            <a href="page-video03.html"><img src="img/hp/003.jpg"></a>
-            <a href="page-video06.html"><img src="img/hp/006.jpg"></a>
-            <a href="page-video09.html"><img src="img/hp/009.jpg"></a>
         </div>
     </section>
 </main>
