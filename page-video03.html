@@ -1,0 +1,85 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+</head>
+<body>
+<main class="videos">
+    <div id="bouton-retour">
+        <a href="index.html">
+            <img src="http://www.gerardparisclavel.fr/bnf/elements/main.png">
+        </a>
+    </div>
+    <section id="video">
+        <div class="videoContainer">
+            <div class="videoWrapper">
+                <iframe src="https://player.vimeo.com/video/258092918?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <section id="liens" class="hide">
+        <div class="linkWrapper">
+            <div class="linkOverflow">
+                <a href="">
+                    <img src="img/video-001/001.png">
+                </a>
+                <a href="">
+                    <img src="img/video-001/002.png">
+                </a>
+                <a href="">
+                    <img src="img/video-001/003.png">
+                </a>
+                <a href="">
+                    <img src="img/video-001/004.png">
+                </a>
+                <a href="">
+                    <img src="img/video-001/005.png">
+                </a>
+                <a href="">
+                    <img src="img/video-001/001.png">
+                </a>
+                <a href="">
+                    <img src="img/video-001/002.png">
+                </a>
+                <a href="">
+                    <img src="img/video-001/003.png">
+                </a>
+                <a href="">
+                    <img src="img/video-001/004.png">
+                </a>
+                <a href="">
+                    <img src="img/video-001/005.png">
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+<script>
+    $(document).ready(function(){
+
+        /*$(document).on('mousemove', function(){
+         console.log("popop")
+         });
+
+         $('.videoWrapper iframe').hover(function(){
+         $('.videoWrapper iframe').css('pointer-events', 'auto');
+         console.log('pop');
+         });*/
+
+        $('#liens').mousewheel(function(event) {
+            var currentScroll = $('.linkOverflow').scrollLeft();
+            var delta = event.deltaY;
+            //$('.videoWrapper iframe').css('pointer-events', 'none');
+            if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                delta *= 33.333;
+            }
+            $('.linkOverflow').scrollLeft(currentScroll - delta);
+        });
+    });
+</script>
+</html>
