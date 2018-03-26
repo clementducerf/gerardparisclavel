@@ -1,0 +1,687 @@
+@charset "UTF-8";
+/*
+Theme Name: Gérard Paris-Clavel WP Theme
+Author: Clément Ducerf
+Author URI: http://www.clementducerf.com/
+Version: 1.0
+*/
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+html {
+  color: #000;
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  *font-size: 100%; }
+
+legend {
+  color: #000; }
+
+#yui3-css-stamp.cssreset {
+  display: none; }
+
+/* Sass Mixins */
+/*
+Column mixins by Tiffany Brown (@webinista / webinista.com)
+Public domain licensed, because, really who couldn't come up with this on their own?
+It's not required, but I'd appreciate you letting me know if you found these useful :-).
+*/
+/* Design Variables */
+/* Colors */
+/* Font families */
+/* Responsiveness */
+/* -------------- */
+@media only screen and (max-width: 599px) {
+  .wrapper {
+    max-width: 400px; } }
+@media only screen and (min-width: 600px) {
+  .wrapper {
+    max-width: 500px; } }
+@media only screen and (min-width: 900px) {
+  .wrapper {
+    max-width: 700px; } }
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    max-width: 1200px; } }
+
+/* Generic Styles */
+* {
+  box-sizing: border-box; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+html {
+  margin: 0;
+  display: block;
+  font-family: "Georgia", Georgia, Palatino, serif;
+  font-size: 12px;
+  /* Gorgeous type Sharpness on osx */
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga" on;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+body {
+  margin: 0;
+  font-size: 13px; }
+
+em {
+  font-style: inherit;
+  font-weight: bold; }
+
+.hide {
+  display: none; }
+
+#bouton-retour {
+  position: fixed;
+  cursor: pointer;
+  z-index: 999;
+  top: 20px;
+  right: 15%; }
+  #bouton-retour img {
+    width: 50px; }
+
+.homepage section#introduction {
+  width: 100%;
+  height: calc(100vh - 100px);
+  overflow: hidden; }
+  .homepage section#introduction nav {
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    top: 11vh;
+    width: 12vw;
+    min-width: 180px; }
+    .homepage section#introduction nav ul li {
+      text-align: center;
+      color: #FFF;
+      text-transform: uppercase;
+      font-size: 2em;
+      margin-bottom: .5em; }
+      .homepage section#introduction nav ul li img {
+        width: 100%; }
+  .homepage section#introduction .txt-introduction {
+    width: 15.05376em;
+    position: absolute;
+    font-size: 1.284106146vw;
+    top: 50%;
+    left: 6.25%;
+    transform: translate(0, -50%); }
+  .homepage section#introduction .image-introduction {
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0; }
+    .homepage section#introduction .image-introduction img {
+      height: calc(100vh - 100px);
+      width: auto;
+      padding-left: 8%; }
+.homepage section#images {
+  width: 100%;
+  background-color: #000;
+  padding: 40px; }
+  .homepage section#images .neuf-images {
+    color: #FFF;
+    margin: 0 auto;
+    /*-moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;*/ }
+    .homepage section#images .neuf-images a {
+      display: inline-block;
+      max-width: calc(33.3333333% - 15px);
+      max-height: calc(33.3333% - 60px);
+      margin-bottom: 20px;
+      margin-right: 20px; }
+      .homepage section#images .neuf-images a:nth-of-type(3n) {
+        margin-right: 0; }
+      .homepage section#images .neuf-images a img {
+        max-width: 100%; }
+
+.videos section#video {
+  height: calc(100vh - 250px);
+  background-color: #FFF;
+  overflow: hidden; }
+  .videos section#video .videoContainer {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: table;
+    width: 100%;
+    height: 100%; }
+    .videos section#video .videoContainer .videoWrapper {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      width: 100%;
+      padding-bottom: 56.25%;
+      /* 16:9 */
+      max-height: 100%;
+      overflow: hidden; }
+      .videos section#video .videoContainer .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-height: 100%; }
+.videos section#liens {
+  height: 250px;
+  padding: 40px 0; }
+  .videos section#liens .linkWrapper {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    padding: 0 40px; }
+    .videos section#liens .linkWrapper .linkOverflow {
+      width: auto;
+      height: calc(100% + 20px);
+      white-space: nowrap;
+      overflow-x: scroll; }
+      .videos section#liens .linkWrapper .linkOverflow a {
+        display: inline-block;
+        margin-right: 20px;
+        vertical-align: middle; }
+
+.images {
+  /* Easy Slider */ }
+  .images * {
+    margin: 0;
+    padding: 0; }
+  .images a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold; }
+  .images a:hover {
+    text-decoration: none;
+    color: red; }
+  .images body {
+    font-size: 13px;
+    font-family: arial, verdana, georgia;
+    color: black;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
+  .images #bouton-bonjour {
+    background-color: red;
+    width: 120px;
+    height: 20px;
+    font-size: 1.25em;
+    text-align: center;
+    position: fixed;
+    top: 30px;
+    right: 30px; }
+  .images #bouton-legende {
+    position: fixed;
+    left: 15%;
+    top: 30px;
+    z-index: 999;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%; }
+  .images #bouton-retour {
+    position: fixed;
+    cursor: pointer;
+    z-index: 999;
+    top: 20px;
+    right: 15%; }
+  .images #bouton-retour img {
+    width: 50px; }
+  .images .container-image {
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    margin-left: -300px;
+    position: relative;
+    text-align: center; }
+  .images .container-image p {
+    height: 600px;
+    line-height: 600px;
+    text-align: center;
+    /* centrage horizontal */ }
+  .images .container-image span {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+    /* on rétablit le line-height */
+    text-align: left;
+    /* ... et l'alignement du texte */ }
+  .images .container-film {
+    width: 500px;
+    height: 409px;
+    position: relative;
+    text-align: center; }
+  .images #content {
+    /* Bloc contenant l’ensemble, centré dans la page */
+    position: fixed;
+    width: 1400px;
+    height: 600px;
+    left: 50%;
+    margin-left: -700px;
+    margin-top: -300px;
+    top: 50%; }
+  .images .contour-noir {
+    border: 1px solid black; }
+  .images .compteur {
+    position: fixed;
+    text-align: center;
+    width: 1400px;
+    font-size: 1em; }
+  .images .description {
+    /* Bloc contenant le texte */
+    float: left;
+    width: 250px;
+    height: 600px;
+    margin-left: 5%;
+    position: absolute; }
+  .images .description p {
+    height: 600px;
+    line-height: 600px;
+    text-align: left;
+    /* centrage horizontal */
+    overflow-y: auto; }
+  .images .description span {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+    /* on rétablit le line-height */
+    text-align: left;
+    /* ... et l'alignement du texte */ }
+  .images .description-principale {
+    /* Bloc contenant le texte */
+    float: left;
+    width: 250px;
+    height: 600px;
+    margin-left: 5%;
+    position: absolute; }
+  .images .description-principale p {
+    text-align: left;
+    /* centrage horizontal */
+    overflow-y: auto;
+    margin-bottom: 1em; }
+  .images .description-principale span {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: normal;
+    /* on rétablit le line-height */
+    text-align: left;
+    /* ... et l'alignement du texte */ }
+  .images .diapositive {
+    width: 1400px; }
+  .images img {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
+  .images .H {
+    height: 99%;
+    /* images orientées à la française */ }
+  .images .sH {
+    top: 15.5%;
+    height: 71%;
+    /* images orientées à la française */
+    position: relative; }
+  .images .esH {
+    top: 30%;
+    height: 40%;
+    /* images orientées à la française */
+    position: relative; }
+  .images html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%; }
+  .images .legende {
+    font-family: "Georgia", serif;
+    font-size: 1em;
+    line-height: 1.3em !important;
+    text-align: left; }
+  .images .legende-galerie {
+    font-family: "Georgia", serif;
+    font-size: 1em;
+    line-height: 1.3em !important;
+    text-align: left; }
+  .images .lien-galerie {
+    position: fixed;
+    background: url("elements/F-droite.png") no-repeat 0 0;
+    bottom: 30px;
+    right: 30px;
+    height: 40px;
+    width: 23px; }
+  .images .temp-image {
+    background-color: gray;
+    margin: 0 10px;
+    float: left;
+    width: 100px;
+    height: 100px; }
+  .images .titre {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: sans-serif; }
+  .images .visible {
+    display: block; }
+  .images .W {
+    width: 99%;
+    /* images orientées à l’italienne */ }
+  .images .sW {
+    width: 70%;
+    position: relative;
+    left: 15%;
+    /* images orientées à l’italienne */ }
+  .images #slider {
+    position: relative; }
+  .images #slider ul, .images #slider li,
+  .images #slider2 ul, .images #slider2 li {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .images #slider li, .images #slider2 li {
+    /*     définit la largeure et la hauteur de la liste des slides      */
+    height: 600px;
+    overflow: hidden;
+    width: 1400px; }
+  .images #prevBtn, .images #nextBtn,
+  .images #slider1next, .images #slider1prev {
+    display: block;
+    width: 23px;
+    height: 40px;
+    z-index: 1000; }
+  .images #nextBtn, .images #slider1next {
+    bottom: 30px;
+    right: 30px;
+    position: fixed;
+    z-index: 3; }
+  .images #prevBtn, .images #slider1prev {
+    bottom: 30px;
+    left: 30px;
+    position: fixed;
+    z-index: 3; }
+  .images #prevBtn a, .images #nextBtn a,
+  .images #slider1next a, .images #slider1prev a {
+    display: block;
+    position: relative;
+    height: 40px;
+    width: 23px;
+    color: black;
+    font-size: 1.5em;
+    background: url("elements/F-gauche-blanche.png") no-repeat 0 0; }
+  .images #nextBtn a, .images #slider1next a {
+    background: url("elements/F-droite-blanche.png") no-repeat 0 0; }
+  @media screen and (min-width: 300px) and (max-width: 1150px) {
+    .images #bouton-legende {
+      display: none; }
+    .images #bouton-retour {
+      position: fixed;
+      cursor: pointer;
+      z-index: 999;
+      top: 20px;
+      right: 50%;
+      margin-right: -25px; }
+    .images .container-image {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin-left: 0px;
+      margin-top: 0px;
+      top: 0px;
+      left: 0px; }
+    .images .container-image p {
+      height: 30000px;
+      line-height: 300px;
+      text-align: left;
+      /* centrage horizontal */ }
+    .images .container-image span {
+      vertical-align: top;
+      display: inline-block;
+      line-height: normal;
+      /* on rétablit le line-height */
+      text-align: left;
+      /* ... et l'alignement du texte */ }
+    .images .container-film {
+      width: 300px;
+      height: 245px; }
+    .images #content {
+      /* Bloc contenant l’ensemble, centré dans la page */
+      position: fixed;
+      width: 300px;
+      height: 10000px;
+      left: 50%;
+      margin-left: -150px;
+      margin-top: 0px;
+      top: 100px; }
+    .images .compteur {
+      position: fixed;
+      text-align: center;
+      bottom: 20px;
+      width: 300px;
+      font-size: 1em; }
+    .images .description {
+      /* Bloc contenant le texte */
+      width: 300px;
+      left: 0;
+      margin-left: 0px;
+      top: 320px;
+      position: relative;
+      height: 0px;
+      z-index: 7000000000; }
+    .images .description p {
+      height: 300px;
+      line-height: 300px;
+      text-align: center; }
+    .images .description span {
+      vertical-align: top;
+      display: block;
+      line-height: normal;
+      /* on rétablit le line-height */
+      text-align: left;
+      /* ... et l'alignement du texte */ }
+    .images .description-principale {
+      width: 300px;
+      left: 0;
+      margin-left: 0px;
+      top: 320px;
+      position: relative;
+      height: 0px;
+      z-index: 7000000000;
+      /* Bloc contenant le texte */
+      display: block; }
+    .images .description-principale p {
+      height: 300px;
+      line-height: 300px;
+      text-align: center; }
+    .images .description-principale span {
+      vertical-align: top;
+      display: block;
+      line-height: normal;
+      /* on rétablit le line-height */
+      text-align: left;
+      /* ... et l'alignement du texte */ }
+    .images .diapositive {
+      width: 300px; }
+    .images .lien-galerie {
+      font-size: 1.5em;
+      position: fixed;
+      bottom: 63px;
+      right: 30px; }
+    .images #slider {
+      height: 10000px; }
+    .images #remerciements span {
+      vertical-align: middle;
+      display: inline-block;
+      line-height: normal;
+      /* on rétablit le line-height */
+      text-align: left;
+      /* ... et l'alignement du texte */ }
+    .images .temp-image {
+      background-color: gray;
+      margin: 0 10px;
+      float: left;
+      width: 100px;
+      height: 100px; }
+    .images .titre {
+      font-size: 1.5em;
+      font-weight: bold;
+      font-family: sans-serif; }
+    .images .visible {
+      display: block; }
+    .images #nextBtn, .images #slider1next, .images #prevBtn, .images #slider1prev {
+      bottom: 50%;
+      margin-bottom: -20px; }
+    .images #slider {
+      height: 3000px; } }
+  @media screen and (min-width: 300px) and (max-width: 1150px) and (orientation: landscape) {
+    .images #bouton-retour {
+      position: fixed;
+      cursor: pointer;
+      z-index: 999;
+      top: 20px;
+      right: 12%; }
+    .images #bouton-legende {
+      position: fixed;
+      left: 12%;
+      top: 50px;
+      z-index: 999;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      display: none; }
+    .images #content {
+      /* Bloc contenant l’ensemble, centré dans la page */
+      position: fixed;
+      width: 300px;
+      height: 10000px;
+      left: 50%;
+      margin-left: -150px;
+      margin-top: 0px;
+      top: 20px; }
+    .images .container-image {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin-left: 0px;
+      margin-top: 0px;
+      top: 0px;
+      left: 0px;
+      text-align: center; } }
+  @media screen and (min-width: 1150px) and (max-width: 1300px) {
+    .images .description {
+      /* Bloc contenant le texte */
+      margin-left: 10%;
+      /*display:none;*/ } }
+  @media screen and (min-width: 1800px) and (max-width: 10040px) {
+    .images #bouton-legende {
+      width: 35px;
+      height: 35px; }
+    .images .container-image {
+      width: 1000px;
+      height: 1000px; }
+    .images .container-image p {
+      height: 1000px;
+      line-height: 1000px; }
+    .images #content {
+      /* Bloc contenant l’ensemble, centré dans la page */
+      position: fixed;
+      width: 2000px;
+      height: 1000px;
+      left: 50%;
+      margin-left: -1000px;
+      margin-top: -500px;
+      top: 50%; }
+    .images .compteur {
+      padding-top: 5px;
+      text-align: center;
+      height: 40px !important;
+      bottom: 20px;
+      width: 2000px;
+      left: 0px;
+      position: relative;
+      z-index: 300000000; }
+    .images .description {
+      /* Bloc contenant le texte */
+      height: 1000px; }
+    .images .description p {
+      height: 1000px;
+      line-height: 1000px; }
+    .images .description-principale {
+      /* Bloc contenant le texte */
+      height: 1000px; }
+    .images .description-principale p {
+      height: 1000px;
+      line-height: 1000px; }
+    .images .diapositive {
+      width: 1500px; }
+    .images .H {
+      position: relative;
+      top: 1.5%;
+      height: 97%;
+      /* images orientées à la française */ }
+    .images #slider li, .images #slider2 li {
+      /*     définit la largeure et la hauteur de la liste des slides      */
+      height: 1000px;
+      overflow: hidden;
+      width: 2000px; } }
+
+.gallerie {
+  background-color: blue; }
+
+/*# sourceMappingURL=style.css.map */
