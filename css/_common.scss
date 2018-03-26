@@ -19,6 +19,7 @@ html{
 
 body{
   margin: 0;
+  font-size: 13px;
 }
 em{
   font-style: inherit;
@@ -27,4 +28,16 @@ em{
 
 .hide{
   display: none;
+}
+
+#bouton-retour {
+  position: fixed;
+  cursor: pointer;
+  z-index: 999;
+  top: 20px;
+  right: 15%;
+
+  img{
+    width: 50px;
+  }
 }

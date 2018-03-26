@@ -12,3 +12,22 @@ add_action( 'wp_enqueue_scripts', 'gpc_assets' );
 
 // Thumbnaill support
 add_theme_support( 'post-thumbnails' );
+
+
+// Check if page has children
+
+function has_children(){
+    global $post;
+
+    $children = get_pages(array('child_of' => $post->ID));
+    if (count($children) == 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+
+// Size for link in chapitre template
+
+add_image_size( 'links', 500, 170 );

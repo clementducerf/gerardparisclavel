@@ -4,13 +4,13 @@ Template Name: Chapitre
 */
 ?>
 <main class="videos">
-    <?php
+    <?php /*
     $pageid = get_the_id();
     $content_post = get_post($pageid);
     $content = $content_post->post_content;
     $content = apply_filters('the_content', $content);
     $content = str_replace(']]>', ']]&gt;', $content);
-    echo $content;
+    echo $content; */
     ?>
     <div id="bouton-retour">
         <a href="<?php echo home_url(); ?>">
@@ -27,36 +27,21 @@ Template Name: Chapitre
     <section id="liens">
         <div class="linkWrapper">
             <div class="linkOverflow">
-                <a href="">
-                    <img src="img/video-001/001.png">
-                </a>
-                <a href="">
-                    <img src="img/video-001/002.png">
-                </a>
-                <a href="">
-                    <img src="img/video-001/003.png">
-                </a>
-                <a href="">
-                    <img src="img/video-001/004.png">
-                </a>
-                <a href="">
-                    <img src="img/video-001/005.png">
-                </a>
-                <a href="">
-                    <img src="img/video-001/001.png">
-                </a>
-                <a href="">
-                    <img src="img/video-001/002.png">
-                </a>
-                <a href="">
-                    <img src="img/video-001/003.png">
-                </a>
-                <a href="">
-                    <img src="img/video-001/004.png">
-                </a>
-                <a href="">
-                    <img src="img/video-001/005.png">
-                </a>
+                <?php
+                // Set up the objects needed
+                $my_wp_query = new WP_Query();
+                global $post;
+                $currentid = $post->ID;
+                $child_pages_args = $my_wp_query->query(array('post_parent' => $currentid,'post_type' => 'page', 'posts_per_page' => '-1','order' => 'ASC','orderby'=>'menu_order'));
+
+                $page_childrens = get_page_children( $currentid, $child_pages_args );
+
+                foreach ($page_childrens as $child_page){
+                    $currentThumbnailUrl = get_the_post_thumbnail_url($child_page->{'ID'}, 'links');
+                    $currentPageUrl = get_page_link($child_page->{'ID'});
+                    echo '<a href="'.$currentPageUrl.'"><img src="'.$currentThumbnailUrl.'"></a>';
+                }
+                ?>
             </div>
         </div>
     </section>

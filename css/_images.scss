@@ -1,0 +1,627 @@
+.images{
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  a {
+    color: black;
+    text-decoration:none;
+    font-weight:bold;
+
+  }
+
+
+  a:hover {
+    text-decoration:none;
+    color:red;
+  }
+
+  body{
+    font-size: 13px;
+    font-family: arial, verdana, georgia;
+    color: black;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  #bouton-bonjour{
+    background-color:red;
+    width:120px;
+    height:20px;
+    font-size:1.25em;
+    text-align:center;
+    position:fixed;
+    top:30px;
+    right:30px;
+  }
+
+  #bouton-legende {
+    position:fixed;
+    left:15%;
+    top:30px;
+    z-index:999;
+    cursor:pointer;
+    width:20px;
+    height:20px;
+    background-color:red;
+    border-radius:50%;
+  }
+
+  #bouton-retour {
+    position:fixed;
+    cursor:pointer;
+    z-index:999;
+    top:20px;
+    right:15%;
+  }
+
+  #bouton-retour img {
+    width:50px;
+  }
+
+
+  .container-image{
+    width: 600px;
+    height: 600px;
+    left: 50%;
+    margin-left: -300px;
+    position: relative;
+    text-align:center;
+  }
+
+  .container-image p{
+    height:600px;
+    line-height:600px;
+    text-align:center; /* centrage horizontal */
+  }
+
+  .container-image span  {
+    vertical-align:middle;
+    display:inline-block;
+    line-height:normal; /* on rétablit le line-height */
+    text-align:left; /* ... et l'alignement du texte */
+  }
+  .container-film{
+    width: 500px;
+    height: 409px;
+
+    position: relative;
+    text-align:center;
+  }
+  #content{              /* Bloc contenant l’ensemble, centré dans la page */
+    position:fixed;
+    width: 1400px;
+    height: 600px;
+    left: 50%;
+    margin-left: -700px;
+    margin-top: -300px;
+    top: 50%;
+  }
+
+  .contour-noir{
+    border:1px solid black;
+  }
+
+  .compteur {
+    position:fixed;
+    text-align:center;
+    width:1400px;
+    font-size:1em;
+  }
+
+
+  .description {         /* Bloc contenant le texte */
+    float:left;
+    width:250px;
+    height: 600px;
+    margin-left:5%;
+    position: absolute;
+  }
+
+
+  .description p {
+    height:600px;
+    line-height:600px;
+    text-align:left; /* centrage horizontal */
+    overflow-y:auto;
+
+  }
+
+
+  .description span  {
+    vertical-align:middle;
+    display:inline-block;
+    line-height:normal; /* on rétablit le line-height */
+    text-align:left; /* ... et l'alignement du texte */
+  }
+
+  .description-principale {         /* Bloc contenant le texte */
+    float: left;
+    width: 250px;
+    height: 600px;
+    margin-left: 5%;
+    position: absolute;
+    //display: none;
+  }
+
+
+  .description-principale p {
+    //height: 600px;
+    //line-height: 600px;
+    text-align:  left; /* centrage horizontal */
+    overflow-y: auto;
+    margin-bottom: 1em;
+  }
+
+
+  .description-principale span  {
+    vertical-align:middle;
+    display:inline-block;
+    line-height:normal; /* on rétablit le line-height */
+    text-align:left; /* ... et l'alignement du texte */
+  }
+
+  .diapositive{
+    width:1400px;
+  }
+
+  img {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  .H{
+    height: 99%;    /* images orientées à la française */
+
+  }
+  .sH{
+    top:15.5%;
+    height: 71%;    /* images orientées à la française */
+    position: relative;
+  }
+
+  .esH{
+    top:30%;
+    height: 40%;    /* images orientées à la française */
+    position: relative;
+  }
+  html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .legende {
+    font-family: "Georgia", serif;
+    font-size:1em;
+    line-height:1.3em !important;
+    text-align:left;
+  }
+
+  .legende-galerie {
+    font-family: "Georgia", serif;
+    font-size:1em;
+    line-height:1.3em !important;
+    text-align:left;
+
+  }
+
+  .lien-galerie {
+
+    position:fixed;
+    background:url('elements/F-droite.png') no-repeat 0 0;
+    bottom:30px;
+    right:30px;
+    height:40px;
+    width:23px;
+  }
+
+
+
+  .temp-image {
+    background-color:gray;
+    margin:0 10px;
+    float:left;
+    width:100px;
+    height:100px;
+  }
+
+  .titre{
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: sans-serif;
+
+  }
+
+  .visible {
+    display:block;
+  }
+
+  .W {
+    width:99%;     /* images orientées à l’italienne */
+  }
+
+  .sW {
+    width:70%;
+    position: relative;
+    left:15%;    /* images orientées à l’italienne */
+  }
+
+
+  /* Easy Slider */
+  #slider{
+    position: relative;
+  }
+  #slider ul, #slider li,
+  #slider2 ul, #slider2 li{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  #slider li, #slider2 li{
+    /*     définit la largeure et la hauteur de la liste des slides      */
+
+    height:600px;
+    overflow:hidden;
+    width:1400px;
+  }
+  #prevBtn, #nextBtn,
+  #slider1next, #slider1prev{
+    display:block;
+    width:23px;
+    height:40px;
+    z-index:1000;
+  }
+  #nextBtn, #slider1next{
+    bottom:30px;
+    right:30px;
+    position:fixed;
+    z-index: 3;
+  }
+  #prevBtn, #slider1prev{
+    bottom:30px;
+    left:30px;
+    position:fixed;
+    z-index: 3;
+  }
+  #prevBtn a, #nextBtn a,
+  #slider1next a, #slider1prev a{
+
+    display:block;
+    position:relative;
+    height:40px;
+    width:23px;
+    color:black;
+    font-size: 1.5em;
+    background:url('elements/F-gauche-blanche.png') no-repeat 0 0;
+
+  }
+  #nextBtn a, #slider1next a{
+    background:url('elements/F-droite-blanche.png') no-repeat 0 0;
+  }
+
+
+  @media screen and (min-width: 300px) and (max-width: 1150px) {
+
+    #bouton-legende {
+
+      display: none;
+    }
+    #bouton-retour {
+      position:fixed;
+      cursor:pointer;
+      z-index:999;
+      top:20px;
+      right:50%;
+      margin-right: -25px;
+    }
+    .container-image{
+      position:  relative;
+      width: 300px;
+      height: 300px;
+      margin-left: 0px;
+      margin-top: 0px;
+      top:  0px;
+      left: 0px;
+
+    }
+    .container-image p{
+      height:30000px;
+      line-height:300px;
+      text-align:left; /* centrage horizontal */
+    }
+
+    .container-image span  {
+      vertical-align: top;
+      display:inline-block;
+      line-height:normal; /* on rétablit le line-height */
+      text-align:left; /* ... et l'alignement du texte */
+    }
+
+    .container-film{
+      width: 300px;
+      height: 245px;
+
+    }
+    #content{              /* Bloc contenant l’ensemble, centré dans la page */
+      position:fixed;
+      width: 300px;
+      height: 10000px;
+      left: 50%;
+      margin-left: -150px;
+      margin-top: 0px;
+      top:100px;
+
+
+    }
+
+    .compteur {
+      position:fixed;
+      text-align:center;
+      bottom: 20px;
+      width:300px;
+      font-size:1em;
+    }
+
+
+    .description {         /* Bloc contenant le texte */
+      width:300px;
+      left: 0;
+      margin-left: 0px;
+      top: 320px;
+      position: relative;
+      height: 0px;
+      z-index: 7000000000;
+    }
+
+
+    .description p {
+      height:300px;
+      line-height:300px;
+      text-align:center;
+    }
+
+
+    .description span  {
+      vertical-align: top;
+      display: block;
+      line-height:normal; /* on rétablit le line-height */
+      text-align:left; /* ... et l'alignement du texte */
+    }
+
+    .description-principale {
+      width:300px;
+      left: 0;
+      margin-left: 0px;
+      top: 320px;
+      position: relative;
+      height: 0px;
+      z-index: 7000000000;        /* Bloc contenant le texte */
+      display:block;
+    }
+
+    .description-principale p {
+      height:300px;
+      line-height:300px;
+      text-align:center;
+    }
+
+
+    .description-principale span  {
+      vertical-align: top;
+      display: block;
+      line-height:normal; /* on rétablit le line-height */
+      text-align:left; /* ... et l'alignement du texte */
+    }
+    .diapositive{
+      width:300px;
+
+
+
+
+
+
+    }
+
+
+    .lien-galerie {
+      font-size: 1.5em;
+      position:fixed;
+      bottom:63px;
+      right:30px;
+    }
+
+
+    #slider{
+      height: 10000px;
+    }
+
+
+    #remerciements span  {
+      vertical-align:middle;
+      display:inline-block;
+      line-height:normal; /* on rétablit le line-height */
+      text-align:left; /* ... et l'alignement du texte */
+    }
+
+    .temp-image {
+      background-color:gray;
+      margin:0 10px;
+      float:left;
+      width:100px;
+      height:100px;
+    }
+
+    .titre{
+      font-size: 1.5em;
+      font-weight: bold;
+      font-family: sans-serif;
+
+    }
+
+    .visible {
+      display:block;
+    }
+
+
+
+    #nextBtn, #slider1next, #prevBtn, #slider1prev{
+      bottom:50%;
+      margin-bottom: -20px;
+
+    }
+
+    #slider{
+      height:3000px;
+    }
+
+  }
+  @media screen and (min-width: 300px) and (max-width: 1150px) and (orientation:landscape) {
+    #bouton-retour {
+      position:fixed;
+      cursor:pointer;
+      z-index:999;
+      top:20px;
+      right:12%;
+    }
+    #bouton-legende {
+      position:fixed;
+      left: 12%;
+      top:50px;
+      z-index:999;
+      cursor:pointer;
+      width:20px;
+      height:20px;
+      background-color:red;
+      border-radius:50%;
+      display: none;
+    }
+    #content{              /* Bloc contenant l’ensemble, centré dans la page */
+      position:fixed;
+      width: 300px;
+      height: 10000px;
+      left: 50%;
+      margin-left: -150px;
+      margin-top: 0px;
+      top:20px;
+    }
+    .container-image{
+      position:  relative;
+      width: 300px;
+      height: 300px;
+      margin-left: 0px;
+      margin-top: 0px;
+      top:  0px;
+      left: 0px;
+      text-align:center;
+
+    }
+
+
+
+  }
+
+  @media screen and (min-width: 1150px) and (max-width: 1300px) {
+    .description {         /* Bloc contenant le texte */
+      margin-left:10%;
+      /*display:none;*/
+    }
+  }
+  @media screen and (min-width: 1800px) and (max-width: 10040px) {
+
+
+    #bouton-legende {
+      width:35px;
+      height:35px;
+    }
+
+
+    .container-image{
+      width: 1000px;
+      height: 1000px;
+    }
+
+    .container-image p{
+      height:1000px;
+      line-height:1000px;
+    }
+
+
+    #content{              /* Bloc contenant l’ensemble, centré dans la page */
+      position:fixed;
+      width: 2000px;
+      height: 1000px;
+      left: 50%;
+      margin-left: -1000px;
+      margin-top: -500px;
+      top: 50%;
+    }
+
+    .compteur {
+      padding-top:5px;
+      text-align:center;
+      height:40px !important;
+      bottom: 20px;
+      width:2000px;
+      left: 0px;
+      position: relative;
+      z-index: 300000000;
+    }
+
+
+    .description {         /* Bloc contenant le texte */
+      height: 1000px;
+    }
+
+
+    .description p {
+      height:1000px;
+      line-height:1000px;
+    }
+
+    .description-principale {         /* Bloc contenant le texte */
+      height: 1000px;
+    }
+
+
+    .description-principale p {
+      height:1000px;
+      line-height:1000px;
+    }
+
+    .diapositive{
+      width:1500px;
+
+    }
+
+    .H{
+
+      position: relative;
+      top:1.5%;
+      height: 97%;    /* images orientées à la française */
+
+    }
+
+    #slider li, #slider2 li{
+      /*     définit la largeure et la hauteur de la liste des slides      */
+
+      height:1000px;
+      overflow:hidden;
+      width:2000px;
+    }
+  }
+
+}

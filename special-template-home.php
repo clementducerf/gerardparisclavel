@@ -11,16 +11,16 @@ Template Name: Home
                     <a href="http://www.gerardparisclavel.fr/bonjour/">
                         <img src="<?php echo get_template_directory_uri().'/img/boutons/blog.gif' ?>" alt="Blog">
                     </a>
-                </li>
-                <li>
-                    <a href="http://www.gerardparisclavel.fr/bnf/">
-                        <img src="<?php echo get_template_directory_uri().'/img/boutons/BNF.gif' ?>" alt="Expo BNF 2016">
-                    </a>
-                </li>
+            </li>
+            <li>
+                <a href="http://www.gerardparisclavel.fr/bnf/">
+                    <img src="<?php echo get_template_directory_uri().'/img/boutons/BNF.gif' ?>" alt="Expo BNF 2016">
+                </a>
+            </li>
             </ul>
-        </nav>
+            </nav>
 
-        <?php if (has_post_thumbnail( $post->ID ) ): ?>
+            <?php if (has_post_thumbnail( $post->ID ) ): ?>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
             <div class="image-introduction">
                 <img src="<?php echo $image[0]; ?>" alt="Avec Gérard Paris-Clavel">
@@ -33,10 +33,8 @@ Template Name: Home
             endwhile; else: ?>
         <p>Sorry, no posts matched your criteria.</p>
         <?php endif; ?>
-
-
         </div>
-
+        
     </section>
 
     <section id="images">
