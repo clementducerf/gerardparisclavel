@@ -11,8 +11,7 @@ Template Name: Home
                     <a href="http://www.gerardparisclavel.fr/bonjour/">
                         <img src="<?php echo get_template_directory_uri().'/img/boutons/blog.gif' ?>" alt="Blog">
                     </a>
-            </li>
-            <li>
+            </li><li>
                 <a href="http://www.gerardparisclavel.fr/bnf/">
                     <img src="<?php echo get_template_directory_uri().'/img/boutons/BNF.gif' ?>" alt="Expo BNF 2016">
                 </a>
@@ -44,13 +43,13 @@ Template Name: Home
             $my_wp_query = new WP_Query();
             global $post;
             $currentid = $post->ID;
-            $video_pages = $my_wp_query->query(array('post_parent' => $currentid,'post_type' => 'page', 'posts_per_page' => '-1','order' => 'ASC'));
+            $video_pages = $my_wp_query->query(array('post_parent' => 0,'post_type' => 'page', 'posts_per_page' => '-1','order' => 'ASC','post__not_in' => array($currentid)));
 
-            $portfolio_childrens = get_page_children( $currentid, $video_pages );
+            //$portfolio_childrens = get_page_children( $currentid, $video_pages );
 
-            foreach ($portfolio_childrens as $video_pages){
-                $currentThumbnailUrl = get_the_post_thumbnail_url($video_pages->{'ID'});
-                $currentPageUrl = get_page_link($video_pages->{'ID'});
+            foreach ($video_pages as $video_page){
+                $currentThumbnailUrl = get_the_post_thumbnail_url($video_page->{'ID'});
+                $currentPageUrl = get_page_link($video_page->{'ID'});
                 echo '<a href="'.$currentPageUrl.'"><img src="'.$currentThumbnailUrl.'"></a>';
             }
             ?>

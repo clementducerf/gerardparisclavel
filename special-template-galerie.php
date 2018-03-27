@@ -2,235 +2,61 @@
 /*
 Template Name: Galerie
 */
-?>
+global $post;
+$currentId = $post->ID;
+$parentId = wp_get_post_parent_id( $currentId );
+$parentUrl = get_page_link($parentId);
+$currentSlide = 0;
+$totalSlides = 0;
 
-<!--//COMPTEUR – Ne renseigner QUE la valeur "nb_images" ci-dessous : le reste est automatisé-->
-<?php
-$nb_images = 7;
-$slide=0;
+ if( have_rows('contenu_diaporama') ){
+     while( have_rows('contenu_diaporama') ): the_row();
+        $totalSlides++;
+     endwhile;
+ }
+
 ?>
 
 <!--//CONTENU-->
-<div id="bouton-retour"><a href="jetons-de-presence.php"><img src="elements/main-blanche.png"/></a></div>
+<div id="bouton-retour">
+    <?php
+    echo '<a href="'.$parentUrl.'"><img src="http://www.gerardparisclavel.fr/bnf/elements/main-blanche.png"></a>';
+    ?>
+</div>
 
-<div id="content">
-
+<div id="content" class="galerie">
     <div id="slider">
-        <ul>
-            <li>
-                <div class="diapositive">
+        <ul class="main-carousel">
 
-                    <div class="description">
+            <?php if( have_rows('contenu_diaporama') ): ?>
 
-                        <p>
-					   				<span class="legende-galerie">
-							  			La Fenêtre expo, Ivry-sur-Seine, 2008
-							  		</span>
-                        </p>
+                <?php while( have_rows('contenu_diaporama') ): the_row();
+                    $img_images = get_sub_field('image_du_diaporama');
+                    $img_titre = get_sub_field('legende_du_diaporama');
 
+                    ?><li class="carousel-cell">
+
+                    <div class="legende-galerie">
+                        <?php echo $img_titre; ?>
                     </div>
 
                     <div class="container-image">
-                        <p><span>
-								<img
-                                    alt="Jetons de présence, par Gérard Paris-Clavel"
-                                    class="W"
-                                    src="images/02-Jetons-de-presence/02.jpg"
-                                /></span></p>
-
+                        <img src="<?php echo $img_images['url']; ?>"/>
+                        <div class="compteur"><?php echo ++$currentSlide.'/'.$totalSlides; ?></div>
                     </div>
 
-                    <div class="compteur">
-                        <?php echo ++$slide;?>/<?php echo $nb_images;?>
-                    </div>
-
-
-                </div>
-            </li>
-
-            <li>
-                <div class="diapositive">
-
-                    <div class="description">
-
-                        <p>
-							  		<span class="legende-galerie">
-							  			<a href="http://www.solidaires.org/article38861.html" target="_blank">
-                                            Journal <I>Expressions Solidaires</I></a> n°53, 2011.
-							  			Double page centrale à afficher
-							  		</span>
-                        </p>
-
-                    </div>
-
-                    <div class="container-image">
-                        <img
-                            alt="Jetons de présence, par Gérard Paris-Clavel"
-                            class="H"
-                            src="images/02-Jetons-de-presence/03.jpg"
-                        />
-                    </div>
-
-                    <div class="compteur">
-                        <?php echo ++$slide;?>/<?php echo $nb_images;?>
-                    </div>
-
-                </div>
 
             </li>
-            <li>
-                <div class="diapositive">
-
-                    <div class="description">
-
-                        <p>
-							  		<span class="legende-galerie">
-							  			<I>Pleins feux sur Ivry</I> à l’Atelier de l’Office Public de l'Habitat (OPH), 2013
-							  		</span>
-                        </p>
-
-                    </div>
-
-                    <div class="container-image">
-                        <p><span>
-								<img
-                                    alt="Jetons de présence, par Gérard Paris-Clavel"
-                                    class="W"
-                                    src="images/02-Jetons-de-presence/04.jpg"
-                                /></span></p>
-                    </div>
-
-                    <div class="compteur">
-                        <?php echo ++$slide;?>/<?php echo $nb_images;?>
-                    </div>
-
-
-                </div>
-            </li>
-            <li>
-                <div class="diapositive">
-
-                    <div class="description">
-
-                        <p>
-							  		<span class="legende-galerie">
-							  			Exposition avec Marc Pataut au Centre Régional
-							  			de la photographie de Douchy-les-Mines, 2009.
-							  			Photo&thinsp;: Marc Pataut
-							  		</span>
-                        </p>
-
-                    </div>
-
-                    <div class="container-image">
-                        <p><span>
-								<img
-                                    alt="Jetons de présence, par Gérard Paris-Clavel"
-                                    class="W"
-                                    src="images/02-Jetons-de-presence/05.jpg"
-                                /></span></p>
-                    </div>
-
-                    <div class="compteur">
-                        <?php echo ++$slide;?>/<?php echo $nb_images;?>
-                    </div>
-
-
-                </div>
-            </li>
-            <li>
-                <div class="diapositive">
-
-                    <div class="description">
-
-                        <p>
-							  		<span class="legende-galerie">
-							  			<I>Manière de voir</I> n°97, 2007
-							  		</span>
-                        </p>
-
-                    </div>
-
-                    <div class="container-image">
-                        <p><span>
-								<img
-                                    alt="Jetons de présence, par Gérard Paris-Clavel"
-                                    class="W"
-                                    src="images/02-Jetons-de-presence/06.jpg"
-                                /></span></p>
-                    </div>
-
-                    <div class="compteur">
-                        <?php echo ++$slide;?>/<?php echo $nb_images;?>
-                    </div>
-
-
-                </div>
-            </li>
-            <li>
-                <div class="diapositive">
-
-                    <div class="description">
-
-                        <p>
-							  		<span class="legende-galerie">
-							  			Maison de la Musique de Nanterre, 2012
-							  		</span>
-                        </p>
-
-                    </div>
-
-                    <div class="container-image">
-                        <p><span>
-								<img
-                                    alt="Jetons de présence, par Gérard Paris-Clavel"
-                                    class="W"
-                                    src="images/02-Jetons-de-presence/07.jpg"
-                                /></span></p>
-                    </div>
-
-                    <div class="compteur">
-                        <?php echo ++$slide;?>/<?php echo $nb_images;?>
-                    </div>
-
-
-                </div>
-            </li>
-            <li>
-                <div class="diapositive">
-
-                    <div class="description">
-
-                        <p>
-							  		<span class="legende-galerie">
-							  			Exposition au centre social AMI à la Patrotte, quartier de Metz, 2009
-							  		</span>
-                        </p>
-
-                    </div>
-
-                    <div class="container-image">
-                        <p><span>
-								<img
-                                    alt="Jetons de présence, par Gérard Paris-Clavel"
-                                    class="W"
-                                    src="images/02-Jetons-de-presence/08.jpg"
-                                /></span></p>
-                    </div>
-
-                    <div class="compteur">
-                        <?php echo ++$slide;?>/<?php echo $nb_images;?>
-                    </div>
-                </div>
-            </li>
+            <?php endwhile; ?>
+            <?php endif; ?>
         </ul>
     </div>
 
+    <span id="prevBtn"><a href=""></a></span>
+    <span id="nextBtn"><a href=""></a></span>
 </div>
 
 
 
 
-</body><!--//close body-->
-
-</html><!--//close html-->
+<?php get_footer(); ?>

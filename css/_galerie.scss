@@ -1,0 +1,108 @@
+.page-template-special-template-galerie{
+
+  transtion: unset;
+  background-color:	#262625;
+  display: block;
+  height: 100vh;
+  overflow: hidden;
+
+  a, .description p, .compteur, .titre, #prevBtn a, #nextBtn a, #slider1next a, #slider1prev a {
+    color: white;
+  }
+
+  ul:focus {outline:0;}
+
+
+
+
+  ///carrousel new styles
+
+  .carousel-cell{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+
+    .container-image{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+
+      @include transform(translate(-50%,-50%));
+
+      @include mq($for-desktop-up){
+        max-width: 600px;
+      }
+
+      @include mq($for-1500-up){
+        max-width: 800px;
+      }
+
+      img{
+        margin-bottom: 2em;
+        max-width: 100%;
+      }
+      .compteur{
+        text-align: center;
+        margin-bottom: 2em;
+      }
+    }
+
+    .legende-galerie{
+      font-family: "Georgia", serif;
+      color: #fff;
+      font-size: 1em;
+      line-height: 1.3em !important;
+      text-align: left;
+      width: 250px;
+      margin: 0 auto;
+      display: block;
+
+      @include mq($for-desktop-up){
+        margin-left: 5%;
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+      }
+    }
+
+  }
+
+
+
+  // custom buttons for the slideshow
+
+  .flickity-prev-next-button.next {
+    right: 10px;
+    background: url('http://www.gerardparisclavel.fr/bnf/elements/F-droite-blanche.png') no-repeat 0 0;
+  }
+
+  .flickity-prev-next-button.previous {
+    left: 30px;
+    background: url('http://www.gerardparisclavel.fr/bnf/elements/F-gauche-blanche.png') no-repeat 0 0;
+  }
+
+  .flickity-prev-next-button {
+    top: unset!important;
+    bottom: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: unset;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .flickity-button {
+    position: absolute;
+    background: #fff;
+    background: hsla(0,0%,100%,.75);
+    border: none;
+    color: #333;
+
+    svg{
+      display: none;
+    }
+  }
+
+
+}

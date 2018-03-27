@@ -3,6 +3,11 @@
 Template Name: Chapitre
 */
 ?>
+    <div id="bouton-retour">
+        <a href="<?php echo home_url(); ?>">
+            <img src="http://www.gerardparisclavel.fr/bnf/elements/main.png">
+        </a>
+    </div>
 <main class="videos">
     <?php /*
     $pageid = get_the_id();
@@ -12,11 +17,6 @@ Template Name: Chapitre
     $content = str_replace(']]>', ']]&gt;', $content);
     echo $content; */
     ?>
-    <div id="bouton-retour">
-        <a href="<?php echo home_url(); ?>">
-            <img src="http://www.gerardparisclavel.fr/bnf/elements/main.png">
-        </a>
-    </div>
     <section id="video">
         <div class="videoContainer">
             <div class="videoWrapper">
