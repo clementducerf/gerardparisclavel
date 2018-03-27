@@ -10,9 +10,8 @@ $parentUrl = get_page_link($parentId);
 
 <div id="header">
     <div id="bouton-retour">
-        <?php
-        echo '<a href="'.$parentUrl.'"><img src="http://www.gerardparisclavel.fr/bnf/elements/main-noire.png"></a>';
-        ?>
+       <a href="<?php echo home_url(); ?>"><img src="http://www.gerardparisclavel.fr/bnf/elements/main-noire.png"></a>';
+
     </div>
 </div>
 

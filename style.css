@@ -385,6 +385,7 @@ position: relative;
     @media only screen and (min-width: 900px) {
       .page-template-special-template-image #content {
         padding-top: 0;
+        height: 100vh;
         overflow: hidden; } }
   .page-template-special-template-image .image {
     width: 100%;
@@ -398,10 +399,13 @@ position: relative;
     @media only screen and (min-width: 1200px) {
       .page-template-special-template-image .image {
         max-width: unset;
-        position: relative;
         right: 0;
         display: block;
-        text-align: center; } }
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0; } }
     .page-template-special-template-image .image img {
       max-width: 100%; }
       @media only screen and (min-width: 1200px) {

@@ -41,7 +41,7 @@ $totalSlides = 0;
                     </div>
 
                     <div class="container-image">
-                        <img src="<?php echo $img_images['url']; ?>"/>
+                        <img data-flickity-lazyload="<?php echo $img_images['url']; ?>"/>
                         <div class="compteur"><?php echo ++$currentSlide.'/'.$totalSlides; ?></div>
                     </div>
 

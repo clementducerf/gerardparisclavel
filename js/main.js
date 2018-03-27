@@ -27,28 +27,9 @@ $(document).ready( function(){
     }
 
 
-
-
-
-
-
-
     if($('body').hasClass('page-template-special-template-image')){
         if(debug)console.log('page image');
-
-        //if(window.matchMedia("(max-width : 900px)").matches){
-            // for mobile version : reverse the order of the elements
-            //$('.description').insertAfter('.image');
-        //}
     }
-
-
-
-
-
-
-
-
 
     if($('body').hasClass('page-template-special-template-galerie')) {
         if (debug)console.log('page galerie');
@@ -64,7 +45,8 @@ $(document).ready( function(){
         $('.main-carousel').flickity({
             // options
             prevNextButtons: true,
-            wrapAround: true
+            wrapAround: true,
+            lazyLoad: true
         });
     }
 });
