@@ -385,7 +385,6 @@ position: relative;
     @media only screen and (min-width: 900px) {
       .page-template-special-template-image #content {
         padding-top: 0;
-        height: 100vh;
         overflow: hidden; } }
   .page-template-special-template-image .image {
     width: 100%;
@@ -399,10 +398,8 @@ position: relative;
     @media only screen and (min-width: 1200px) {
       .page-template-special-template-image .image {
         max-width: unset;
-        position: absolute;
+        position: relative;
         right: 0;
-        width: 100%;
-        height: 100%;
         display: block;
         text-align: center; } }
     .page-template-special-template-image .image img {
@@ -544,5 +541,91 @@ position: relative;
     color: #333; }
     .page-template-special-template-galerie .flickity-button svg {
       display: none; }
+
+.page-template-special-template-grapus #content {
+  position: relative;
+  padding-top: 150px; }
+  @media only screen and (min-width: 900px) {
+    .page-template-special-template-grapus #content {
+      padding-top: 0;
+      /*height: 100vh;
+      overflow: hidden;*/ } }
+  .page-template-special-template-grapus #content #video {
+    height: auto;
+    background-color: #FFF;
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    -moz-transform: translateY(-12%);
+    -o-transform: translateY(-12%);
+    -ms-transform: translateY(-12%);
+    -webkit-transform: translateY(-12%);
+    transform: translateY(-12%); }
+    @media only screen and (min-width: 900px) {
+      .page-template-special-template-grapus #content #video {
+        max-height: calc(100vh - 250px);
+        -moz-transform: unset;
+        -o-transform: unset;
+        -ms-transform: unset;
+        -webkit-transform: unset;
+        transform: unset; } }
+    @media only screen and (min-width: 1200px) {
+      .page-template-special-template-grapus #content #video {
+        height: 100vh; } }
+    .page-template-special-template-grapus #content #video .videoContainer {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: table;
+      width: 100%;
+      height: auto; }
+      @media only screen and (min-width: 1200px) {
+        .page-template-special-template-grapus #content #video .videoContainer {
+          height: 100%; } }
+      .page-template-special-template-grapus #content #video .videoContainer .videoWrapper {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        width: 100%;
+        padding-bottom: 56.25%;
+        /* 16:9 */
+        max-height: 100%;
+        overflow: hidden; }
+        .page-template-special-template-grapus #content #video .videoContainer .videoWrapper iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
+          @media only screen and (min-width: 900px) {
+            .page-template-special-template-grapus #content #video .videoContainer .videoWrapper iframe {
+              max-height: calc(100vh - 250px); } }
+  .page-template-special-template-grapus #content .description-grapus {
+    max-width: 300px;
+    text-align: left;
+    display: block;
+    margin: 0 auto;
+    font-family: "Georgia", Georgia, Palatino, serif;
+    line-height: 130%;
+    font-size: 1.3em; }
+    @media only screen and (min-width: 1200px) {
+      .page-template-special-template-grapus #content .description-grapus {
+        max-width: 1000px; } }
+    .page-template-special-template-grapus #content .description-grapus img {
+      width: auto;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 1em; }
+      @media only screen and (min-width: 1200px) {
+        .page-template-special-template-grapus #content .description-grapus img {
+          display: inline-block;
+          width: auto;
+          float: left;
+          margin-right: 2em; } }
+    .page-template-special-template-grapus #content .description-grapus a {
+      font-weight: normal;
+      text-decoration: underline;
+      font-size: 1em;
+      line-height: 150%; }
 
 /*# sourceMappingURL=style.css.map */

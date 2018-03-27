@@ -1,0 +1,110 @@
+.page-template-special-template-grapus{
+
+
+  #content {
+    position: relative;
+    padding-top: 150px;
+
+    @include mq($for-tablet-landscape-up){
+      padding-top: 0;
+      /*height: 100vh;
+      overflow: hidden;*/
+    }
+
+    #video{
+      height: auto;
+      background-color: #FFF;
+      overflow: hidden;
+      position: relative;
+      top: 50%;
+      @include transform(translateY(-12%));
+
+      @include mq($for-tablet-landscape-up){
+        max-height: calc(100vh - 250px);
+        @include transform(unset);
+      }
+
+      @include mq($for-desktop-up){
+        height: 100vh;
+      }
+
+      .videoContainer{
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+        display: table;
+        width: 100%;
+        height: auto;
+
+        @include mq($for-desktop-up){
+          height: 100%;
+        }
+
+        .videoWrapper{
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+          width: 100%;
+          padding-bottom: 56.25%; /* 16:9 */
+          max-height: 100%;
+          overflow: hidden;
+
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            //max-height: 100%;
+            //max-height: unset;
+
+            @include mq($for-tablet-landscape-up){
+              max-height: calc(100vh - 250px);
+            }
+          }
+        }
+      }
+    }
+
+    .description-grapus{
+      max-width: 300px;
+      //max-width: 100%;
+      text-align: left;
+      display: block;
+      margin: 0 auto;
+      font-family: "Georgia", Georgia, Palatino, serif;
+      line-height: 130%;
+      font-size: 1.3em;
+
+      @include mq($for-desktop-up){
+        max-width: 1000px;
+      }
+
+      img{
+        width: auto;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 1em;
+
+
+        @include mq($for-desktop-up){
+          display: inline-block;
+          width: auto;
+          float: left;
+          margin-right: 2em;
+        }
+        
+      }
+
+      a{
+        font-weight: normal;
+        text-decoration: underline;
+        font-size: 1em;
+        line-height: 150%;
+      }
+    }
+
+  }
+
+
+}
