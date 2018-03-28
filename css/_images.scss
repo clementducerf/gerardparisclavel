@@ -47,21 +47,20 @@
         position: relative;
         top: 50%;
         @include transform(translateY(-50%));
-        width: 600px;
-      }
-
-      @include mq($for-desktop-up){
-        width: 600px;
+        //width: 600px;
+        max-width: 600px;
+        max-height: 100%;
+        width: auto;
         margin-left: 15%;
       }
 
       @include mq($for-1500-up){
-        width: 800px;
+        max-width: 800px;
         margin-left: unset;
       }
 
       @include mq($for-big-desktop-up){
-        width: 900px;
+        max-width: 900px;
       }
 
     }

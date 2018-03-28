@@ -375,7 +375,7 @@ position: relative;
           max-height: 90px; }
           @media only screen and (min-width: 900px) {
             .videos section#liens .linkWrapper .linkOverflow a img {
-              max-height: unset; } }
+              max-height: 170px; } }
 
 .page-template-special-template-image {
   position: relative; }
@@ -417,18 +417,17 @@ position: relative;
           -ms-transform: translateY(-50%);
           -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-          width: 600px; } }
-      @media only screen and (min-width: 1200px) {
-        .page-template-special-template-image .image img {
-          width: 600px;
+          max-width: 600px;
+          max-height: 100%;
+          width: auto;
           margin-left: 15%; } }
       @media only screen and (min-width: 1500px) {
         .page-template-special-template-image .image img {
-          width: 800px;
+          max-width: 800px;
           margin-left: unset; } }
       @media only screen and (min-width: 1800px) {
         .page-template-special-template-image .image img {
-          width: 900px; } }
+          max-width: 900px; } }
   .page-template-special-template-image .description {
     width: 100%;
     position: relative;

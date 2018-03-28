@@ -3,7 +3,6 @@ var debug = true;
 $(document).ready( function(){
 
 
-
     if($('body').hasClass('page-template-special-template-chapitre')){
         if(debug)console.log('page chapitre');
 
@@ -25,8 +24,7 @@ $(document).ready( function(){
             }
         });
     }
-
-
+    
     if($('body').hasClass('page-template-special-template-image')){
         if(debug)console.log('page image');
     }

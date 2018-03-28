@@ -93,7 +93,7 @@
             max-height: 90px;
 
             @include mq($for-tablet-landscape-up){
-              max-height: unset;
+              max-height: 170px;
             }
           }
         }
