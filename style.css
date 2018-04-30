@@ -281,7 +281,6 @@ position: relative;
         .homepage section#images .neuf-images a {
           max-width: calc(33.3333333% - 15px);
           max-height: calc(33.3333% - 60px);
-          margin-bottom: 20px;
           margin-right: 20px; }
           .homepage section#images .neuf-images a:nth-of-type(3n) {
             margin-right: 0; } }
@@ -452,7 +451,8 @@ position: relative;
       font-family: "Georgia", serif;
       color: #000;
       font-size: 1em;
-      line-height: 1.3em !important; }
+      line-height: 1.3em !important;
+      margin-bottom: 1em; }
       @media only screen and (min-width: 900px) {
         .page-template-special-template-image .description p {
           overflow-y: auto; } }
@@ -460,13 +460,72 @@ position: relative;
       display: block;
       width: 300px;
       margin: 0 auto;
-      vertical-align: top; }
+      vertical-align: top;
+      margin-bottom: 0.5em; }
       @media only screen and (min-width: 1200px) {
         .page-template-special-template-image .description .titre {
           vertical-align: middle;
           display: inline-block;
           position: relative;
           top: 50%; } }
+
+.etagere {
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  width: 92em;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .etagere .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .etagere .rangee {
+    display: block;
+    height: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+    /*&:nth-of-type(1){
+      height: 100px;
+      .livres{
+        max-height: 100%;
+        width: auto;
+      }
+    }
+    &:nth-of-type(2){
+      height: 56%;
+      .livres{
+        max-height: 100%;
+        width: auto;
+      }
+    }
+    &:nth-of-type(3){
+      height: 56%;
+      .livres{
+        max-height: 100%;
+        width: auto;
+      }
+    }
+    &:nth-of-type(4){
+      height: 26%;
+      .livres{
+        max-height: 100%;
+        width: auto;
+      }
+    }*/ }
+    .etagere .rangee:first-of-type {
+      height: 185px; }
+    .etagere .rangee .livres {
+      display: inline-block;
+      vertical-align: baseline;
+      margin-right: 8px; }
+      .etagere .rangee .livres img {
+        max-height: 100%;
+        border: 1px solid #000; }
 
 .page-template-special-template-galerie {
   transtion: unset;

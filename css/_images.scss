@@ -71,6 +71,8 @@
     position: relative;
     margin-bottom: 5em;
 
+
+
     @include mq($for-desktop-up){
       width: 250px;
       margin-left: 5%;
@@ -89,6 +91,7 @@
       color: #000;
       font-size: 1em;
       line-height: 1.3em !important;
+      margin-bottom: 1em;
 
       @include mq($for-tablet-landscape-up){
         overflow-y: auto;
@@ -100,6 +103,8 @@
       width: 300px;
       margin: 0 auto;
       vertical-align: top;
+      margin-bottom: 0.5em;
+
 
 
       @include mq($for-desktop-up){

@@ -1,0 +1,69 @@
+.etagere{
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  width: 92em; // original value 80
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .rangee{
+    display: block;
+    height: 150px;
+
+    text-align: center;
+    margin-bottom: 20px;
+
+    &:first-of-type{
+      height: 185px;
+    }
+
+
+    /*&:nth-of-type(1){
+      height: 100px;
+      .livres{
+        max-height: 100%;
+        width: auto;
+      }
+    }
+    &:nth-of-type(2){
+      height: 56%;
+      .livres{
+        max-height: 100%;
+        width: auto;
+      }
+    }
+    &:nth-of-type(3){
+      height: 56%;
+      .livres{
+        max-height: 100%;
+        width: auto;
+      }
+    }
+    &:nth-of-type(4){
+      height: 26%;
+      .livres{
+        max-height: 100%;
+        width: auto;
+      }
+    }*/
+    .livres{
+      display: inline-block;
+      vertical-align: baseline;
+      margin-right: 8px;
+
+
+      img{
+        max-height: 100%;
+        border: 1px solid #000;
+        }
+    }
+  }
+}

@@ -114,7 +114,7 @@
         @include mq($for-tablet-landscape-up){
           max-width: calc(33.3333333% - 15px);
           max-height: calc(33.3333% - 60px);
-          margin-bottom: 20px;
+          //margin-bottom: 20px;
           margin-right: 20px;
 
           &:nth-of-type(3n){
