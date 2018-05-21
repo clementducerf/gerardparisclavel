@@ -39,7 +39,7 @@ Template Name: Chapitre
                 foreach ($page_childrens as $child_page){
                     $currentThumbnailUrl = get_the_post_thumbnail_url($child_page->{'ID'}, 'links');
                     $currentPageUrl = get_page_link($child_page->{'ID'});
-                    echo '<a href="'.$currentPageUrl.'"><img src="'.$currentThumbnailUrl.'"></a>';
+                    echo '<a target="_blank" href="'.$currentPageUrl.'"><img src="'.$currentThumbnailUrl.'"></a>';
                 }
                 ?>
             </div>
